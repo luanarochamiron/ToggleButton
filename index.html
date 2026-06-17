@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Forms HTML, CSS">
+    <meta name="description" content="Formulario em HTML e CSS.">
+    <meta name="author" content="Luana Rocha Miron">
+    <meta name="robots" content="index,follow">
+    <meta name="X-UA-Compatible" content="IE=7">
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Toggle Button </title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="toggle-btn">
+        <div class="icon">
+            <i class="bx bxs-lock-open"></i>
+        </div>
+    </div>
+
+
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle-btn"),
+        lockIcon = document.querySelector(".icon i");
+
+        toggleBtn.addEventListener("click", () => {
+            toggleBtn.classList.toggle("active");
+
+            if (toggleBtn.classList.contains("active")) {
+              return  lockIcon.classList.replace("bxs-lock-open", "bxs-lock");
+            }
+          lockIcon.classList.replace("bxs-lock", "bxs-lock-open");
+        });
+    </script>
+</body>
+</html>
